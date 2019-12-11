@@ -122,4 +122,10 @@ class Film
     return result.first
   end
 
+  def self.find_by_id(id)
+    required_film = films.each {|film| return film if film.id == id}
+    return required_film
+  end
+
+
 end
